@@ -20,7 +20,7 @@ class City(models.Model):
         return f'City: {self.name}'
 
 
-for city in City.objects.filter(user__name__icontains='ива'):
+for city in City.objects.filter(user__name__istartswith='ива'):
     print(city.name)
 
 
